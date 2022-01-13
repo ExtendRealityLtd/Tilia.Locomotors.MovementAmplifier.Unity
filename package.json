@@ -2,7 +2,7 @@
     "name": "io.extendreality.tilia.locomotors.movementamplifier.unity",
     "displayName": "Tilia Locomotors MovementAmplifier Unity",
     "description": "Amplify real world movement steps in a virtual spatial environment for the Unity software.",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [

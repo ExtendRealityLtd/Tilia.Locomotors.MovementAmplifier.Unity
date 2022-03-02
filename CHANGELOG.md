@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.MovementAmplifier.Unity/compare/v1.0.15...v1.1.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([bb9642c](https://github.com/ExtendRealityLtd/Tilia.Locomotors.MovementAmplifier.Unity/commit/bb9642ce4aa0f79617e7dfe1e91bd402008ed67e))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.0.15](https://github.com/ExtendRealityLtd/Tilia.Locomotors.MovementAmplifier.Unity/compare/v1.0.14...v1.0.15) (2022-02-14)
 
 #### Miscellaneous Chores

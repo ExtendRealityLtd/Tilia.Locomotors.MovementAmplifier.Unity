@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.MovementAmplifier.Unity/compare/v1.1.0...v1.1.1) (2022-03-15)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.46.0 to 1.47.0 ([dfe41c8](https://github.com/ExtendRealityLtd/Tilia.Locomotors.MovementAmplifier.Unity/commit/dfe41c840ed9e61cb0f182fd514d666552fa058e))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.46.0 to 1.47.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.46.0...v1.47.0)
+
 ## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.MovementAmplifier.Unity/compare/v1.0.15...v1.1.0) (2022-03-02)
 
 #### Features

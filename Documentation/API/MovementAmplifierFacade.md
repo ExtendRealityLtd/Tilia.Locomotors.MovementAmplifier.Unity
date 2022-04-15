@@ -14,6 +14,8 @@ The public interface for the MovementAmplifier prefab.
   * [Source]
   * [Target]
 * [Methods]
+  * [ClearSource()]
+  * [ClearTarget()]
   * [OnAfterIgnoredRadiusChange()]
   * [OnAfterMultiplierChange()]
   * [OnAfterSourceChange()]
@@ -90,6 +92,26 @@ public GameObject Target { get; set; }
 
 ### Methods
 
+#### ClearSource()
+
+Clears [Source].
+
+##### Declaration
+
+```
+public virtual void ClearSource()
+```
+
+#### ClearTarget()
+
+Clears [Target].
+
+##### Declaration
+
+```
+public virtual void ClearTarget()
+```
+
 #### OnAfterIgnoredRadiusChange()
 
 Called after [IgnoredRadius] has been changed.
@@ -135,6 +157,8 @@ protected virtual void OnAfterTargetChange()
 [Source]: MovementAmplifierFacade.md#Source
 [Source]: MovementAmplifierFacade.md#Source
 [Target]: MovementAmplifierFacade.md#Target
+[Source]: MovementAmplifierFacade.md#Source
+[Target]: MovementAmplifierFacade.md#Target
 [IgnoredRadius]: MovementAmplifierFacade.md#IgnoredRadius
 [Multiplier]: MovementAmplifierFacade.md#Multiplier
 [Source]: MovementAmplifierFacade.md#Source
@@ -149,6 +173,8 @@ protected virtual void OnAfterTargetChange()
 [Source]: #Source
 [Target]: #Target
 [Methods]: #Methods
+[ClearSource()]: #ClearSource
+[ClearTarget()]: #ClearTarget
 [OnAfterIgnoredRadiusChange()]: #OnAfterIgnoredRadiusChange
 [OnAfterMultiplierChange()]: #OnAfterMultiplierChange
 [OnAfterSourceChange()]: #OnAfterSourceChange

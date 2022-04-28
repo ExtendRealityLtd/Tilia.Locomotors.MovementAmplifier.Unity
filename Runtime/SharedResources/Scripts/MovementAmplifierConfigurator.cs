@@ -1,13 +1,11 @@
 namespace Tilia.Locomotors.MovementAmplifier
 {
     using UnityEngine;
-    using Malimbe.XmlDocumentationAttribute;
-    using Malimbe.PropertySerializationAttribute;
-    using Zinnia.Extension;
-    using Zinnia.Tracking.Follow;
     using Zinnia.Data.Attribute;
     using Zinnia.Data.Operation.Mutation;
     using Zinnia.Data.Type.Transformation.Aggregation;
+    using Zinnia.Extension;
+    using Zinnia.Tracking.Follow;
 
     /// <summary>
     /// Sets up the MovementAmplifier prefab based on the provided user settings.
@@ -15,57 +13,155 @@ namespace Tilia.Locomotors.MovementAmplifier
     public class MovementAmplifierConfigurator : MonoBehaviour
     {
         #region Facade Settings
+        [Header("Facade Settings")]
+        [Tooltip("The public interface facade.")]
+        [SerializeField]
+        [Restricted]
+        private MovementAmplifierFacade facade;
         /// <summary>
         /// The public interface facade.
         /// </summary>
-        [Serialized]
-        [field: Header("Facade Settings"), DocumentedByXml, Restricted]
-        public MovementAmplifierFacade Facade { get; protected set; }
+        public MovementAmplifierFacade Facade
+        {
+            get
+            {
+                return facade;
+            }
+            protected set
+            {
+                facade = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The public interface facade.")]
+        [SerializeField]
+        [Restricted]
+        private ObjectDistanceComparator radiusOriginMover;
         /// <summary>
         /// Moves the radius origin.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public ObjectDistanceComparator RadiusOriginMover { get; protected set; }
+        public ObjectDistanceComparator RadiusOriginMover
+        {
+            get
+            {
+                return radiusOriginMover;
+            }
+            protected set
+            {
+                radiusOriginMover = value;
+            }
+        }
+        [Tooltip("Determines whether MovementAmplifierFacade.Source is inside the radius.")]
+        [SerializeField]
+        [Restricted]
+        private ObjectDistanceComparator distanceChecker;
         /// <summary>
         /// Determines whether <see cref="MovementAmplifierFacade.Source"/> is inside the radius.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ObjectDistanceComparator DistanceChecker { get; protected set; }
+        public ObjectDistanceComparator DistanceChecker
+        {
+            get
+            {
+                return distanceChecker;
+            }
+            protected set
+            {
+                distanceChecker = value;
+            }
+        }
+        [Tooltip("Moves the objects.")]
+        [SerializeField]
+        [Restricted]
+        private ObjectDistanceComparator objectMover;
         /// <summary>
         /// Moves the objects.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ObjectDistanceComparator ObjectMover { get; protected set; }
+        public ObjectDistanceComparator ObjectMover
+        {
+            get
+            {
+                return objectMover;
+            }
+            protected set
+            {
+                objectMover = value;
+            }
+        }
+        [Tooltip("Subtracts the radius.")]
+        [SerializeField]
+        [Restricted]
+        private FloatAdder radiusSubtractor;
         /// <summary>
         /// Subtracts the radius.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public FloatAdder RadiusSubtractor { get; protected set; }
+        public FloatAdder RadiusSubtractor
+        {
+            get
+            {
+                return radiusSubtractor;
+            }
+            protected set
+            {
+                radiusSubtractor = value;
+            }
+        }
+        [Tooltip("Stabilizes the radius by ensuring MovementAmplifierFacade.Target moves back into the radius.")]
+        [SerializeField]
+        [Restricted]
+        private float radiusStabilizer = 0.001f;
         /// <summary>
         /// Stabilizes the radius by ensuring <see cref="MovementAmplifierFacade.Target"/> moves back into the radius.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public float RadiusStabilizer { get; protected set; } = 0.001f;
+        public float RadiusStabilizer
+        {
+            get
+            {
+                return radiusStabilizer;
+            }
+            protected set
+            {
+                radiusStabilizer = value;
+            }
+        }
+        [Tooltip("Amplifies the movement.")]
+        [SerializeField]
+        [Restricted]
+        private Vector3Multiplier movementMultiplier;
         /// <summary>
         /// Amplifies the movement.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public Vector3Multiplier MovementMultiplier { get; protected set; }
+        public Vector3Multiplier MovementMultiplier
+        {
+            get
+            {
+                return movementMultiplier;
+            }
+            protected set
+            {
+                movementMultiplier = value;
+            }
+        }
+        [Tooltip("Moves the target.")]
+        [SerializeField]
+        [Restricted]
+        private TransformPositionMutator targetPositionMutator;
         /// <summary>
         /// Moves the target.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public TransformPositionMutator TargetPositionMutator { get; protected set; }
+        public TransformPositionMutator TargetPositionMutator
+        {
+            get
+            {
+                return targetPositionMutator;
+            }
+            protected set
+            {
+                targetPositionMutator = value;
+            }
+        }
         #endregion
 
         /// <summary>
